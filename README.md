@@ -1,86 +1,160 @@
-# Compra de empanadas
+# 🥟
+# Dumplings project
 
-## Enunciado del problema
+Hi Geeks! I have made a project where you put the number and type of dumpling you want and you recieve the cheapes prize you have to pay based on an arithmetic average   
 
-El profesor Maple se embarca en la tarea de adquirir empanadas para todos los participantes del bootcamp de programación. Dado que hoy es el Día de las Empanadas,  hay una oferta especial en la que te llevas hasta tres empanadas y solo pagas la más cara. Con un presupuesto ajustado para el curso, los profesores debaten para intentar minimizar el gasto total por todas las empanadas.
+## Index 🧾
 
-Entonces, el profesor Maple decide seguir la siguiente estrategia: como la empanada más cara la tendrá que pagar de todas formas, la comprará junto a la segunda y tercera más caras, que ofrecen el mayor ahorro. Con las n-3 empanadas restantes, aplicará el mismo procedimiento hasta que no quede ninguna.
-
-Los profesores reflexionan y llegan a la conclusión de que esta es la mejor estrategia. Pero cuando están a punto de pagar, escuchan la siguiente conversación de una familia de al lado:
-
-"Queremos una empanada de pollo, de 12 euros, una de carne, de 14 euros, y una vegetariana, de 16 euros."
-
-Los profesores piensan inmediatamente: "Cogerán la oferta 3x1, de forma que solo paguen los 16 euros de la empanada vegetariana y se lleven gratis la de carne y la de pollo". A lo cual, la familia continúa:
-
-"Pero pónganosla de la siguiente forma: Dos empanadas mitad pollo y mitad vegetariana, y la de carne aparte. Como todas las empanadas valen 14 euros, cogeremos la oferta 3x1 y nos las llevaremos por 14 euros".
-
-Cuando los profesores salen de su asombro, deciden que lo más sensato es utilizar el hecho de que las empanadas se pueden pedir mitad de un tipo y mitad de otro, pagando por ella la media del costo de las dos empanadas enteras. Así, una empanada mitad pollo y mitad vegetariana valdrá (12 + 16)/2 = 14 euros. Sin embargo, no logran decidir cuál es la mejor forma de repartir las empanadas en mitades primero, y en grupos después, para minimizar el precio.
-
-Ayúdales haciendo una función que lo calcule lo más rápido posible: hay decenas de estudiantes hambrientos que dependen de ti.
-
-Las empanadas que han elegido los profesores tienen 3, 4 o 5 ingredientes. La masa de una empanada vale 6 euros, y cada ingrediente adicional vale 2 euros. Así, las empanadas pueden valer 12, 14 o 16 euros. Se garantiza que el número total de empanadas será múltiplo de 3.
-
-## Entrada
-
-La función debe tener tres parámetros de entrada. Cada conjunto de entrada consta de tres enteros, a b c, que son el número de empanadas de 3, 4 y 5 ingredientes, respectivamente. Se garantiza que el número de empanadas, a + b + c, cumple que a + b + c < 40. Además, el número de empanadas es divisible entre 3.
-
-## Salida
-
-Por cada conjunto de entrada, retornar un único entero: la mínima cantidad de euros que se puede pagar para llevarse todas las empanadas.
-
-## Ejemplos de casos de uso
-
-| Entrada     | Salida      |
-| ----------- | ----------- |
-| 1, 1, 1     | 14          |
-| 3, 3, 0     | 26          |
-| 2, 0, 1     | 14          |
-| 9, 10, 11   | 142         |
+- [Technologies ⚙](#technologies-)
+- [Download ⬇](#download-)
+- [Source Code 🔬](#source-code-)
+- [Roadmap ❗](#roadmap-)
+- [Author 🙍‍♂️](#author-🙍‍♂️)
+- [Time of development ⌛](#time-of-development-)
 
 
-## Instrucciones de uso
 
-1. Clonar el repositorio
-3. Instalar las dependencias:
+## Technologies ⚙
 
-    ```bash
-    npm install
-    ```
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=css3&logoColor=white" alt="JavaScript" />
+<img src="https://img.shields.io/badge/NodeJs-339933?style=for-the-badge&logo=Node.js&logoColor=white" alt="Nodejs" />
+<img src="https://img.shields.io/badge/VITEST-6E9F18?style=for-the-badge&logo=Vitest&logoColor=white" alt="Viyest" />
 
-4. Completar los argumentos y el cuerpo de la función `fn` en el archivo (`main.js`). No se debe renombrar la función `fn`.
 
-    ```javascript
-    // main.js
-    export const fn = (/* argumentos de la función */) => {
-    // Cuerpo de la función: Completa la lógica de la función aquí.
-    };
-    ```
 
-4. Ejecutar los test:
-    ```bash
-    npm run test
-    ```
 
-## Evaluación
+## Download ⬇
 
-### Mínimo
-Para el APTO se deben pasar todos los test excepto los de validaciones de errores en la entrada de datos
+Enjoy yourself with this project in your local storage adding this command in your terminal
 
-### Extra
-Pasar los test de validación de errores en la entrada de datos (Throws error)
-
-### Ejemplo de ejecución de los test
-
-```bash
-✓ main.test.js (7)
-   ✓ Function fn - Input Parameter Test Cases (7)
-     ✓ Case: fn(1, 1, 1) - Expected Result: 14
-     ✓ Case: fn(3, 3, 0) - Expected Result: 26
-     ✓ Case: fn(2, 0, 1) - Expected Result: 14
-     ✓ Case: fn(9, 10, 11) - Expected Result: 142
-     ✓ Throw error on negative input value: fn(-1, 3, 1)
-     ✓ Throws error when the total sum of inputs (2+2+1) is not a multiple of 3: fn(2, 2, 1)
-     ✓ Throws error when the total sum of inputs (15+15+20) is not less than 40: fn(15, 15, 20)
+```sh
+git clone https://github.com/FRR95/ProyectoEmpanadas.git
 ```
 
- 
+You can see my commits in this url:
+
+> [https://github.com/FRR95/ProyectoEmpanadas/commits/main/]
+
+## Source Code 🔬
+
+**JS**
+> [https://github.com/FRR95/ProyectoEmpanadas/blob/main/main.js]
+
+
+```sh
+export const fn = (a, b, c) => {
+   // )||(a < 0 || b < 0 || c < 0)||((a + b + c) % 3 != 0
+    let res = 0;//Declaring the result of the operation
+    if (((a + b + c) > 39)||(a < 0 || b < 0 || c < 0)||((a + b + c) % 3 != 0)) { ///If the Sum of the three values is more than 39 or one of the three values is negative (less than zero) or the sum of the three numbers is not divisible by three (module 3 is not equal 0)
+      console.log("Lo sentimos,el numero de empanadas no debe superar 39");///Print Error message via console
+        throw error();/////Throwing error to vitest
+    }
+  
+    else {//////////If none of the previous conditions are true the operation can be done 
+        res = Math.ceil(((a * 12) + (b * 14) + (c * 16)) / 3); ////Math.ceil method in case of decimal number result,round that one,each number of meals with their own prize added together and divided by the number of values (arithmetic average)
+       console.log(res);///Print Result via console
+        return res;///Print Result to vitest
+    }
+};
+
+let arrayEmpanadas = [1, 1, 1]; /////Declaring the array with the values
+
+fn(...arrayEmpanadas);//Calling the action with rest parameter
+```
+
+**VITEST**
+> [https://github.com/FRR95/ProyectoEmpanadas/blob/main/main.test.js]
+
+```sh
+import { fn } from "./main.js";
+
+describe("Function fn - Input Parameter Test Cases", () => {
+   test("Case: fn(1, 1, 1) - Expected Result: 14", () => {
+      const result = fn(1, 1, 1);
+      expect(result).toBe(14);
+   });
+
+   test("Case: fn(3, 3, 0) - Expected Result: 26", () => {
+      const result = fn(3, 3, 0);
+      expect(result).toBe(26);
+   });
+
+   test("Case: fn(2, 0, 1) - Expected Result: 14", () => {
+      const result = fn(2, 0, 1);
+      expect(result).toBe(14);
+   });
+
+   test("Case: fn(9, 10, 11) - Expected Result: 142", () => {
+      const result = fn(9, 10, 11);
+      expect(result).toBe(142);
+   });
+
+   test("Case: fn(11, 10, 9) - Expected Result: 139", () => {
+      const result = fn(11, 10, 9);
+      expect(result).toBe(139);
+   });
+
+   test("Throw error on negative input value: fn(-1, 3, 1)", () => {
+      expect(() => fn(-1, 3, 1)).toThrow();
+   });
+
+   test("Throws error when the total sum of inputs (2+2+1) is not a multiple of 3: fn(2, 2, 1)", () => {
+      expect(() => fn(2, 2, 1)).toThrow();
+   });
+
+   test("Throws error when the total sum of inputs (15+15+20) is not less than 40: fn(15, 15, 20)", () => {
+      expect(() => fn(15, 15, 20)).toThrow();
+   });
+});
+```
+***The project passes all the tests:***
+
+<img src="./img/capturetest.PNG">
+
+
+**PACKAGE.JSON**
+[https://github.com/FRR95/ProyectoEmpanadas/blob/main/package.json]
+```sh
+{
+  "name": "empanadas-challenge",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Desafío de programación para resolver un problema de optimización para minimizar el gasto al comprar empanadas. Se incluye una descripción detallada del problema y se proporcionan casos de prueba.",
+  "main": "main.js",
+  "scripts": {
+    "start":"node main.js",
+    "test": "vitest"
+  },
+  "keywords": [
+    "javascript",
+    "challenge",
+    "exercise",
+    "programación",
+    "testing"
+  ],
+  "author": "Fidel Gilart",
+  "license": "ISC",
+  "devDependencies": {
+    "vitest": "^1.0.4"
+  }
+}
+```
+***Start inserted in the script to shorten the execution command ```node main.js```***
+## Roadmap ❗
+
+- **Install NodeJs on your computer to run this aplication** Use this url to download it [https://nodejs.org/en]
+- **Install all the dependencies** Use the command ```npm install``` in your console
+- **Test the application** Use the command ```npm run test``` in your console
+- **Start the appllication** Change the ```let arrayEmpanadas = [1, 1, 1]; ```(Chicken,meat and vegetarian respectively)and use the command ```npm start``` in your console to run the application and see the results
+
+
+## Author 🙍‍♂️
+
+- **Francisco Rocher Roure** - FullStack Developer
+  - [GitHub](https://github.com/FRR95) - [LinkedIn](https://www.linkedin.com/in/franciscorocher/) - [Portfolio](https://franciscorocherdev.com/)
+
+
+
+## Time of development ⌛
+
+- One Week
