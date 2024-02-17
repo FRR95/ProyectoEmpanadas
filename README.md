@@ -1,5 +1,5 @@
-# 🥟
-# Dumplings project
+
+#Dumplings project 🥟
 
 Hi Geeks! I have made a project where you put the number and type of dumpling you want and you recieve the cheapes prize you have to pay based on an arithmetic average   
 
